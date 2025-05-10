@@ -1,0 +1,167 @@
+/* Full Page Background (Optional if you still want a base background for the page) */
+body {
+  background-color: #181c2f; /* Dark background for the page */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.presale-container {
+  background: rgba(20, 20, 40, 0.92);
+  border: 2px solid #ff00cc;
+  border-radius: 18px;
+  box-shadow: 0 0 32px #ff00cc, 0 0 64px #333399;
+  padding: 60px 50px 50px 50px;  /* Increased padding to make the container bigger */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px; /* Adjusted width to make the container much larger */
+  max-width: 800px; /* Larger max-width for better design */
+  margin: 40px auto;
+  background-image: url('futuristic-landscape-dubai.webp'); /* Your custom cyberpunk image */
+  background-size: cover; /* Ensure the background fits the container */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.6);  /* Optional overlay to make text pop */
+  position: relative; /* Needed for the frame */
+}
+
+/* Cyberpunk Frame Effect */
+.presale-container::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 22px;
+  background: linear-gradient(45deg, #ff00cc, #39ff14, #333399, #ff00cc); /* Neon-like gradient */
+  background-size: 400% 400%;
+  animation: neonFrame 3s ease-in-out infinite; /* Glowing animation */
+  z-index: -1; /* Ensure the frame is behind the container */
+}
+
+/* Glowing Neon Frame Animation */
+@keyframes neonFrame {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Section Titles */
+.presale-container h2 {
+  color: #00fff7;
+  text-shadow: 0 0 12px #00fff7, 0 0 32px #333399;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace, sans-serif;
+  font-size: 2rem;  /* Larger font size for headings */
+  margin: 24px 0 12px 0;
+  letter-spacing: 2px;
+}
+
+/* Input Fields */
+.presale-container input[type="number"] {
+  background: #181c2f;
+  color: #fff;
+  border: 2px solid #39ff14;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  margin-right: 12px;
+  outline: none;
+  box-shadow: 0 0 8px #39ff14;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.presale-container input[type="number"]:focus {
+  border: 2px solid #ff00cc;
+  box-shadow: 0 0 16px #ff00cc;
+}
+
+/* Cyberpunk Buttons */
+.presale-container button {
+  background: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', 'Montserrat', monospace, sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 0 0 16px #ff00cc, 0 0 32px #333399;
+  text-shadow: 0 0 8px #fff, 0 0 16px #ff00cc;
+  cursor: pointer;
+  margin-bottom: 24px;
+  margin-top: 0;
+  transition: transform 0.1s, box-shadow 0.2s, background 0.2s;
+  width: 100%;
+  max-width: 260px;
+}
+.presale-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 32px #ff00cc, 0 0 64px #333399;
+  background: linear-gradient(90deg, #333399 0%, #ff00cc 100%);
+}
+
+/* Price Text */
+.price-text {
+  color: #ffcc00;
+  font-size: 1.3rem;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace, sans-serif;
+  text-shadow: 0 0 8px #ffcc00, 0 0 12px #ff00cc;
+  margin-top: 12px;
+}
+
+/* Description Text */
+.presale-container p {
+  color: #00fff7;
+  font-size: 1.4rem;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace, sans-serif;
+  text-shadow: 0 0 8px #00fff7, 0 0 16px #ff00cc;
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* Status Box */
+#presaleStatus {
+  background: rgba(20, 20, 40, 0.95);
+  color: #39ff14;
+  border: 2px solid #ff00cc;
+  border-radius: 10px;
+  padding: 16px 24px;
+  font-family: 'Share Tech Mono', 'Orbitron', monospace, sans-serif;
+  font-size: 1.1rem;
+  margin: 18px 0 0 0;
+  box-shadow: 0 0 24px #ff00cc, 0 0 8px #39ff14 inset;
+  text-shadow: 0 0 8px #39ff14, 0 0 2px #fff;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+}
+#presaleStatus:empty {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .presale-container {
+    padding: 18px 6vw;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .presale-container h2 {
+    font-size: 1.3rem;
+  }
+  .presale-container button {
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+}

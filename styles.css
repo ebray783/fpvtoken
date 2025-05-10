@@ -1,0 +1,177 @@
+body {
+  background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', 'Orbitron', monospace, sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyberpunk-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  min-width: 200px;
+}
+
+.cyberpunk-title {
+  font-size: 2rem;
+  color: #00fff7;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px #00fff7, 0 0 32px #333399;
+}
+
+.cyberpunk-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.cyberpunk-label {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.cyberpunk-input {
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-right: 15px;
+  outline: none;
+  background: #181c2f;
+  color: #fff;
+  box-shadow: 0 0 5px #00fff7;
+}
+
+#claimAirdropBtn {
+  background: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 36px;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', 'Montserrat', monospace, sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 0 0 16px #ff00cc, 0 0 32px #333399;
+  text-shadow: 0 0 8px #fff, 0 0 16px #ff00cc;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+  margin-left: 50px;
+}
+#claimAirdropBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 32px #ff00cc, 0 0 64px #333399;
+  background: linear-gradient(90deg, #333399 0%, #ff00cc 100%);
+}
+
+#status {
+  background: rgba(20, 20, 40, 0.95);
+  color: #39ff14;
+  border: 2px solid #ff00cc;
+  border-radius: 10px;
+  padding: 18px 30px;
+  font-family: 'Share Tech Mono', 'Orbitron', monospace, sans-serif;
+  font-size: 1.1rem;
+  margin: 24px 0 32px 0;
+  box-shadow: 0 0 24px #ff00cc, 0 0 8px #39ff14 inset;
+  text-shadow: 0 0 8px #39ff14, 0 0 2px #fff;
+  max-width: 420px;
+  word-break: break-word;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for other buttons */
+.cyberpunk-btn {
+  background: linear-gradient(90deg, #00fff7 0%, #333399 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', 'Montserrat', monospace, sans-serif;
+  letter-spacing: 5px;
+  box-shadow: 0 0 12px #00fff7, 0 0 24px #333399;
+  text-shadow: 0 0 8px #fff, 0 0 16px #00fff7;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: transform 0.1s, box-shadow 0.2s;
+  width: 220px;
+}
+.cyberpunk-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 32px #00fff7, 0 0 64px #333399;
+  background: linear-gradient(90deg, #333399 0%, #00fff7 100%);
+}
+
+.cyberpunk-btn.red {
+  background: linear-gradient(90deg, #ff0055 0%, #ff00cc 100%);
+  box-shadow: 0 0 16px #ff0055, 0 0 32px #ff00cc;
+  color: #fff;
+}
+.cyberpunk-btn.red:hover {
+  background: linear-gradient(90deg, #ff00cc 0%, #ff0055 100%);
+  box-shadow: 0 0 32px #ff00cc, 0 0 64px #ff0055;
+}
+#status:empty {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .cyberpunk-container {
+    min-width: auto;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .cyberpunk-title {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .cyberpunk-form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .cyberpunk-label {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    text-align: left;
+  }
+
+  .cyberpunk-input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+ #claimAirdropBtn {
+  position: relative;
+  left:-20px;  /* move left */
+  top: 0px;    /* move down */
+}
+
+
+  #status {
+    font-size: 1rem;
+    padding: 14px 20px;
+    width: 100%;
+  }
+
+  .cyberpunk-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}

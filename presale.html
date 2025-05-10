@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Orbitron:700|Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="presale.css">
+
+  <meta charset="UTF-8">
+  <title>Token Presale</title>
+  <link rel="stylesheet" href="presale.css">
+ 
+</head>
+<body>
+  <div class="presale-container">
+   <h2>Carbon Token Presale</h2>
+<p>Price: <span id="carbonPrice">Loading...</span> usdt</p>
+<input type="number" id="carbonAmount" placeholder="Amount to buy">
+<button id="buyCarbonBtn">Buy Carbon</button>
+
+<h2>Solar Wind Token Presale</h2>
+<p>Price: <span id="solarPrice">Loading...</span> usdt</p>
+<input type="number" id="solarAmount" placeholder="Amount to buy">
+<button id="buySolarBtn">Buy Solar Wind</button>
+
+<h2>FPV Token Presale</h2>
+<p>Price: <span id="fpvPrice">Loading...</span> usdt</p>
+<input type="number" id="fpvAmount" placeholder="Amount to buy">
+<button id="buyFPVBtn">Buy FPV</button>
+
+    <div id="presaleStatus"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+<script src="presale.js"></script>
+</body>
+</html>
