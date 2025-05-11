@@ -52,9 +52,9 @@ async function claimAirdrop() {
     let tx;
     if (!ownsNFT) {
       const claimFee = await contract.claimFee();
-      tx = await contract.claimAirdrop(ethers.parseEther("5000"), { value: claimFee });
+      tx = await contract.claimAirdrop(ethers.parseEther("10000"), { value: claimFee });
     } else {
-      tx = await contract.claimAirdrop(ethers.parseEther("5000"));
+      tx = await contract.claimAirdrop(ethers.parseEther("10000"));
     }
 
     updateStatus("⏳ Waiting for confirmation...");
